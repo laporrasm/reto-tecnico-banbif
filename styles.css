@@ -12,6 +12,12 @@ body {
     padding: 2em;
 }
 
+.logo-back-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .text-color-primary {
     color: var(--main-color);
 }
@@ -105,6 +111,10 @@ body {
     margin: 3em 0;
 }
 
+.title-container {
+    display: none;
+}
+
 @media only screen and (min-width: 500px) {
     .card-steps-container {
         position: relative;
@@ -161,6 +171,10 @@ body {
         border-radius: 0.75em;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     }
+    .button {
+        width: 250px;
+        margin-left: auto;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -169,14 +183,49 @@ body {
         gap: 1em;
     }
 
+    .logo-back-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
     .form-description {
         margin: 1em 0;
+        font-size: 1.25rem;
     }
 
     h1 {
-        display: block;
         font-size: 3.5rem;
         font-weight: 900;
         color: var(--main-color);
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        color: var(--main-color);
+    }
+
+    .form-question {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+        gap: 1em;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        gap: 6em;
     }
 }
